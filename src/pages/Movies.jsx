@@ -22,11 +22,13 @@ const Movies = () => {
       setLoading(true);
       const response = await axios.get(
         `https://www.omdbapi.com/?apikey=7840b18e&s=${title}`
-      );
-      setMovies(response.data);
-      setLoading(false);
+        );
+        setMovies(response.data);
+        setLoading(false);
+        console.log(movies)
     }
   }
+
 
   useEffect(() => {
     fetchMovies();

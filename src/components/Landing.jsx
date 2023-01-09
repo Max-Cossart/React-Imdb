@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 import UndrawMovies from '../assets/undraw.svg'
 
 const Landing = () => {
@@ -16,16 +16,11 @@ const Landing = () => {
                 Find the movie you want to here!
               </h2>
               <div className="landing__search">
-                <input
-                  className="landing__search--bar"
-                  type="text"
-                  placeholder="Search by Movie Title"
-                />
-                <span>
+                <Link to="/movies">
                   <button className="landing__search--button pointer">
-                    <FontAwesomeIcon icon="magnifying-glass"/>
+                    Search Movies
                   </button>
-                </span>
+                </Link>
               </div>
             </div>
             <figure className="landing__img--wrapper">
